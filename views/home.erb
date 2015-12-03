@@ -1,0 +1,7 @@
+<!--loop through the collection of database items, render to page  -->
+
+<%@items.each do |item|%>
+<div class='item-container'>Name: <%=item.name%></div>
+<div class='item-container'>Quantity: <%=item.quantity%></div>
+<hr>
+<%end%>
