@@ -1,0 +1,8 @@
+<p>
+  are your sure want to destroy <%=@item.name%>?
+</p>
+
+<form action="/delete" method="post">
+  <input type="hidden" name='id' value="<%=@item.id%>">
+  <input type="submit" value="delete!">
+</form>
