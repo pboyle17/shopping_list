@@ -63,6 +63,15 @@ class ItemsController < ApplicationsController
     erb :create_list
   end
 
+  post '/create' do
+    @list=List.new
+    @list.name=params[:name]
+    @list.member=params[:id]
+    @list.save
+    @lists=List.all
+    return @lists.to_json
+  end
+
 
 
 end
