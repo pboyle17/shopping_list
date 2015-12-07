@@ -15,7 +15,7 @@ class AccountsController < ApplicationsController
     if user
       p 'made it to if statement of user block'
       session[:current_user]=user
-      redirect '/login/success'
+      redirect '/list'
 
     else
       p 'made it to the else statement of if user'
@@ -43,7 +43,7 @@ class AccountsController < ApplicationsController
   end
 
   get '/success' do
-    erb :success
+    redirect '/list'
   end
 
   get '/incorrect' do

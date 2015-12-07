@@ -1,4 +1,15 @@
-<form action="/update" method="post">
+<% if session[:current_user] %>
+  <h2>Hello , <%= session[:current_user].user_name %></h2>
+  <a href="/list/add">Add an item to your shopping_list</a>
+
+  <hr>
+<% else %>
+  <a href="/login">Login</a>
+  <a href="/login/register">Register</a>
+  <hr>
+  <% end %>
+
+<form action="/list/update" method="post">
   <input type="hidden" name="id" value="<%=@item.id%>">
   <input type="text" name="name" value='<%=@item.name%>'>
   <input type="text" name="quantity" value='<%=@item.quantity%>'>

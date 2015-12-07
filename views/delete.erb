@@ -1,8 +1,19 @@
+<% if session[:current_user] %>
+  <h2>Hello , <%= session[:current_user].user_name %></h2>
+  <a href="/list/add">Add an item to your shopping_list</a>
+
+  <hr>
+<% else %>
+  <a href="/login">Login</a>
+  <a href="/login/register">Register</a>
+  <hr>
+  <% end %>
+
 <p>
   are your sure want to destroy <%=@item.name%>?
 </p>
 
-<form action="/delete" method="post">
+<form action="/list/delete" method="post">
   <input type="hidden" name='id' value="<%=@item.id%>">
   <input type="submit" value="delete!">
 </form>

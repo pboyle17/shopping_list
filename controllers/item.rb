@@ -6,7 +6,7 @@ class ItemsController < ApplicationsController
     #create a collection of all the items
     @items=Item.all
     #render to the page with the home view
-    erb :home
+    erb :list
   end
 
   #Create

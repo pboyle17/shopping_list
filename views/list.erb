@@ -1,0 +1,19 @@
+<!--loop through the collection of database items, render to page  -->
+
+<% if session[:current_user] %>
+  <h2>Hello , <%= session[:current_user].user_name %></h2>
+  <a href="/list/add">Add an item to your shopping_list</a>
+
+  <hr>
+<% else %>
+  <a href="/login">Login</a>
+  <a href="/login/register">Register</a>
+  <hr>
+  <% end %>
+
+<%@items.each do |item|%>
+  <div class='item-container'>Item: <%=item.name%> </div>
+  <div class='item-container'>Quantity: <%=item.quantity%></div>
+  <a href="/list/update/<%=item.id%>">update</a>  <a href="/list/delete/<%=item.id%>">Delete</a>
+  <hr>
+<%end%>

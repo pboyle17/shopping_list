@@ -16,6 +16,23 @@ class ApplicationsController < Sinatra::Base
   #   erb :not_found
   # end
 
+  def does_user_exist(username)
+user = Account.find_by(:user_name => username)
+if user
+  return true
+else
+  return false
+end
+end
+
+def authorization_check
+if session[:current_user] == nil
+  redirect '/not_authorized'
+else
+  return true
+end
+end
+
   get '/' do
     redirect '/login'
   end

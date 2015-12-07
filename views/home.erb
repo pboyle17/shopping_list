@@ -1,8 +1,0 @@
-<!--loop through the collection of database items, render to page  -->
-
-<%@items.each do |item|%>
-  <div class='item-container'>Item: <%=item.name%> </div>
-  <div class='item-container'>Quantity: <%=item.quantity%></div>
-  <a href="/update/<%=item.id%>">update</a>  <a href="/delete/<%=item.id%>">Delete</a>
-  <hr>
-<%end%>
