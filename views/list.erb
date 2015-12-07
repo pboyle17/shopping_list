@@ -3,6 +3,7 @@
 <% if session[:current_user] %>
   <h2>Hello , <%= session[:current_user].user_name %></h2>
   <a href="/list/add">Add an item to your shopping_list</a>
+  <a href="/list/create">Create a new list!</a>
 
   <hr>
 <% else %>

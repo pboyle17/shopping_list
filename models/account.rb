@@ -1,4 +1,7 @@
 class Account < ActiveRecord::Base
+
+  has_many :lists
+  
   include BCrypt
 
 #setter

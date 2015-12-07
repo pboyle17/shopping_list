@@ -1,3 +1,22 @@
 body {
   background-color:gray;
+  text-align: center;
+}
+
+input {
+  margin:5px auto;
+  font-size:2em;
+  display:block;
+  border-radius:10px;
+
+}
+
+.submit {
+  background-color:rgb(50, 18, 54);
+  color:gray;
+}
+
+a {
+  margin:10px;
+  font-size:1.25em;
 }

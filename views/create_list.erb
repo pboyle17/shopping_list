@@ -1,0 +1,9 @@
+<h1>create list page!</h1>
+
+
+<form  action="/list/create" method="post">
+  <input type="hidden" name="id" value="<%= session[:current_user].id %>">
+  <input type="text" name="name" placeholder="name">
+  <input type="submit" value="create list">
+
+</form>

@@ -59,6 +59,10 @@ class ItemsController < ApplicationsController
     erb :confirmation
   end
 
+  get '/create' do
+    erb :create_list
+  end
+
 
 
 end
