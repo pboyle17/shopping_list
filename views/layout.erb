@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>shopping_list</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
+
     <h1>Your very own awesome shopping list application</h1>
-    <a href="/add">Add an item to your shopping_list</a>
+    <a href="/list/add">Add an item to your shopping_list</a>
+    <a href="/login">Login</a>
+    <a href="/login/register">Register</a>
     <hr>
-    <%=yield%>
+
+    <%= yield %>
+
   </body>
 </html>

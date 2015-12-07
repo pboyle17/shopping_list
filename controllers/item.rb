@@ -1,4 +1,4 @@
-class ItemController < ApplicationsController
+class ItemsController < ApplicationsController
 
   #Read
   get '/' do
